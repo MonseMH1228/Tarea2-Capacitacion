@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button><a href="index.html">RFC</a></button>
+        <button><a href="curp.html">CURP</a></button>
+        <button><a href="direccion.html">Dirección</a></button>
+        <button><a href="suma.html">Suma</a></button>
+        <button><a href="captura.html">Captura</a></button>
+        <br>
+        <br>
+    </div>
+        <div>
+            <h1>Preguntas para un programador Junior</h1>
+            <label for="">¿Qué lenguajes de programación conoces?</label>
+            <input type="text" id="preguntaUno">
+            <br>
+            <label>¿Has trabajado en equipo en algún proyecto de programación?</label>
+            <input type="text" id="preguntaDos">
+            <br>
+            <label for="">¿Cómo manejas la resolución de problemas en tu trabajo?</label>
+            <input type="text" id="preguntaTres">
+            <br>
+            <label for="">¿Cómo te mantienes al día con las nuevas tendencias y tecnologías?</label>
+            <input type="text" id="preguntaCuatro">
+            <br>
+            <label for="">¿Tienes alguna experiencia con pruebas unitarias?
+                <input type="text" id="preguntaCinco">
+                <br>
+                <label>¿Cómo controlas las versiones de tu código?</label>
+                <input type="text" id="preguntaSeis">
+                <br>
+                <label>¿Cómo manejas los errores en tu código?</label>
+                <input type="text" id="preguntaSiete">
+                <br>
+                <label for="">¿Puedes hablar sobre un proyecto del que te sientas orgulloso?</label>
+                <input type="text" id="preguntaOcho">
+                <br>
+                <label for="">¿Cuál es la característica que más valoras en un equipo de trabajo?</label>
+                <input type="text" id="preguntaNueve">
+                <br>
+                <label for="">¿Cómo manejas la presión o el estrés en el trabajo?</label>
+                <input type="text" id="preguntaDiez">
+
+                <input type="button" value="Guardar" onclick="obtenerDatos()"/> 
+    </div>
+
+    <script>
+        function obtenerDatos(){
+
+        var preguntaUno = document.getElementById("preguntaUno").value;
+        var preguntaDos = document.getElementById("preguntaDos").value;
+        var preguntaTres = document.getElementById("preguntaTres").value;
+        var preguntaCuatro = document.getElementById("preguntaCuatro").value;
+        var preguntaCinco = document.getElementById("preguntaCinco").value;
+        var preguntaSeis = document.getElementById("preguntaSeis").value;
+        var preguntaSiete = document.getElementById("preguntaSiente").value;
+        var preguntaOcho = document.getElementById("preguntaOcho").value;
+        var preguntaNueve = document.getElementById("preguntaNueve").value;
+        var preguntaNueve = document.getElementById("preguntaDiez").value;
+
+    var respuestas = {
+        resputataUno: preguntaUno,
+        resputataUno: preguntaDos,
+        resputataUno: preguntaTres,
+        resputataUno: preguntaCuatro,
+        resputataUno: preguntaCinco,
+        resputataUno: preguntaSeis,
+        resputataUno: preguntaSiete,
+        resputataUno: preguntaOcho,
+        resputataUno: preguntaNueve,
+        resputataUno: preguntaDiez
+        
+    };
+        console.log(respuestas);
+    }
+
+   
+    </script>
+</body>
+</html>

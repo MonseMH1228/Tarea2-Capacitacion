@@ -31,8 +31,7 @@
         <input type="button" value="Guardar" onclick="obtenerDatos()"/> 
 
         <br> <br>
-        <label for="">RFC:</label>
-        <p id="rfcGenerado"> </p>
+        <p id="aatos"> </p>
 
     </div>
 
@@ -43,26 +42,19 @@
         var apellidoPaterno = document.getElementById("cajaDeTextApellidoPaterno").value;
         var apellidoMaterno = document.getElementById("cajaDeTextApellidoMaterno").value;
         var fechaDeNacimiento = document.getElementById("cajaTextoFechaDeNacimiento").value;
-        
-        var rfcGenerado = generaRFC(nombre, apellidoMaterno, apellidoPaterno, fechaDeNacimiento);
 
-        document.getElementById("rfcGenerado").innerText = rfcGenerado;
-}
-
-
-    function generaRFC(nombre, apellidoPaterno, apellidoMaterno, fechaDeNacimiento){
-
-        var inicialApellidoPaterno = apellidoPaterno.slice(0,2).toUpperCase();
-        var inicialApellidoMaterno = apellidoMaterno.slice(0,1).toUpperCase();
-        var inicialNombre = nombre.slice(0,1).toUpperCase();
-        var fecha = fechaDeNacimiento.replaceAll("-","").slice(2,8);
-        
-        var rfc = inicialApellidoPaterno + inicialApellidoMaterno + inicialNombre + fecha;
-
-        return rfc;
-}
-
-</script>
+    var persona = {
+        nombre: nombre,
+        apellidoPaterno: apellidoPaterno,
+        apellidoMaterno: apellidoMaterno,
+        fechaDeNacimiento: fechaDeNacimiento,
+        rfc: generaRFC(nombre, apellidoPaterno, apellidoMaterno, fechaDeNacimiento)
+    };
+        console.log(persona);
+        var datosCurp = `${persona}`
+        document.getElementById("datos").innerText = datosCurp
+    }
+    </script>
 
 </body>
 </html>

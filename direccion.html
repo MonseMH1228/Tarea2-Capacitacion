@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button><a href="index.html">RFC</a></button>
+        <button><a href="curp.html">CURP</a></button>
+        <button><a href="direccion.html">Dirección</a></button>
+        <button><a href="suma.html">Suma</a></button>
+        <button><a href="captura.html">Captura</a></button>
+        <br>
+        <br>
+    </div>
+        <div>
+        <label>Calle</label>
+        <input type="text" id="cajaDeTextCalle"/>
+        <br/>
+        <label for="">Numero</label>
+        <input type="number" id="cajaDeTextNumero">
+        <br>
+        <label for="">Colonia</label>
+        <input type="text" id="cajaDeTextColonia">
+        <br>
+        <label for="">Codigo Postal</label>
+        <input type="number" id="cajaTextoCodigoPostal">
+        <br>
+        <label for="">Estado</label>
+        <input type="text" name="" id="cajaTextoEstado">
+        <br>
+        <input type="button" value="Guardar" onclick="obtenerDatos()"/>
+        
+        <h3>Direccion Completa: </h3>
+        <p id="direccion"></p>
+    </div>
+
+    <script>
+        function obtenerDatos(){
+        var calle = document.getElementById("cajaDeTextCalle").value;
+        var numero = document.getElementById("cajaDeTextNumero").value;
+        var colonia = document.getElementById("cajaDeTextColonia").value;
+        var codigoPostal = document.getElementById("cajaTextoCodigoPostal").value;
+        var estado = document.getElementById("cajaTextoEstado").value
+
+    var direccion = {
+        calle:calle,
+        numero: numero,
+        colonia: colonia,
+        codigoPostal: codigoPostal,
+        estado: estado
+    };
+        console.log(direccion);
+        var direccionCompleta = `${calle} #${numero}, ${colonia}, CP ${codigoPostal}, ${estado}`;
+        document.getElementById("direccion").innerText = direccionCompleta;
+    }
+    </script>
+</body>
+</html>
